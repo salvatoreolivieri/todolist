@@ -50,7 +50,9 @@ const app = new Vue({
     },
 
     deleteItem(index){
-      this.toDoList.splice(index, 1);
+      if (confirm("Sei sicuro di voler eliminare questa task?")){
+        this.toDoList.splice(index, 1);
+      }
     }
   }
 
