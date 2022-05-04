@@ -18,8 +18,8 @@
 
       <div class="add-task-container">
         <div class="input-container">
-          <input v-model="newToDoItem.text" type="text" placeholder="Write Task">
-          <input v-model="newToDoItem.category" style="width: 100px;" type="text" placeholder="Add Category">
+          <input @keyup.enter="addItem()" v-model="newToDoItem.text" type="text" placeholder="Write Task">
+          <input @keyup.enter="addItem()" v-model="newToDoItem.category" style="width: 100px;" type="text" placeholder="Add Category">
           <button @click="addItem()">Add Task</button>
         </div>
       </div>

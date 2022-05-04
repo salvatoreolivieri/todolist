@@ -140,3 +140,9 @@
 .css{
   background-color: #64C0A9;
 }
+
+.javascript,
+.js{
+  background-color: #FFC900;
+  color: black;
+}
