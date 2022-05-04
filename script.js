@@ -8,7 +8,7 @@ const app = new Vue({
 
       {
         text: "Ripassare CSS",
-        done: true
+        done: false
       },
 
       {
@@ -26,9 +26,14 @@ const app = new Vue({
   },
 
   methods: {
-    // taskdone(index){
-    //   this.idem[index].toToList.classlist.add("task-done")
-    // }
+
+    taskDone(index){
+      this.toDoList[index].done = !this.toDoList[index].done
+    },
+
+    deleteItem(index){
+      this.toDoList.splice(index, 1);
+    }
   }
 
 });

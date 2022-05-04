@@ -93,6 +93,10 @@
 
 /* Lista */
 
+.task-done{
+  text-decoration: line-through;
+}
+
 .input-container ul{
   width: 100%;
 
@@ -111,9 +115,9 @@
 .input-container li i{
   color: #47ADF1;
   cursor: pointer;
+  margin-left: 20px;
 }
 
-
-.task-done{
-  text-decoration: line-through;
+#myCheck{
+  width: 15px;
 }

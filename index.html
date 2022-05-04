@@ -27,8 +27,15 @@
         <div class="input-container">
           <ul>
             <li v-for="(item, index) in toDoList" :class="item.done ? 'task-done' : '' ">
-              {{item.text}}
-              <i class="fa-solid fa-trash"></i>
+
+              <div class="task-item">
+                <input @click.splice="taskDone(index)" style="cursor: pointer;" type="checkbox" id="myCheck" >
+  
+                {{item.text}}
+              </div>
+              <div class="trash-item">
+                <i @click="deleteItem(index)" class="fa-solid fa-trash"></i>
+              </div>
             </li>
           </ul>
         </div>
