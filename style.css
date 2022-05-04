@@ -112,3 +112,8 @@
   color: #47ADF1;
   cursor: pointer;
 }
+
+
+.task-done{
+  text-decoration: line-through;
+}
