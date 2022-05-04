@@ -1,5 +1,114 @@
+/* Global */
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#app{
+  background-color: #F6F8F9;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+/* Contenitori */
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  border-radius: 10px;
+}
+
+.add-task-container,
+.task-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  border-radius: 10px;
+
+  padding: 20px 0;
+  margin-bottom: 5px;
+}
+
+.input-container{
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* Input */
+
+.input-container input{
+
+  color: grey;
+  border: 1px solid lightgrey;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 15px;
+  width: 200px;
+}
+
+.input-container input:focus{
+  outline: none;
+}
+
+
+
+/* Bottoni */
+
+.input-container button{
+  background-color: #47ADF1;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.input-container button:hover,
+.input-container li i:hover{
+  opacity: 0.8;
+}
+
+
+/* Lista */
+
+.input-container ul{
+  width: 100%;
+
+}
+
+.input-container li{
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom: 1px solid lightgray;
+
+  list-style: none;
+  padding: 10px;
+}
+
+.input-container li i{
+  color: #47ADF1;
+  cursor: pointer;
 }
