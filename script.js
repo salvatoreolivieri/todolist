@@ -41,12 +41,18 @@ const app = new Vue({
     },
 
     addItem(){
-      this.toDoList.push(this.newToDoItem);
-      this.newToDoItem = {
-        text: "",
-        done: false,
-        category: ""
-      };
+
+      if (this.newToDoItem.text.length < 2) {
+        alert("Inserisci una vera task pappamolla")
+      } else{
+        this.toDoList.push(this.newToDoItem);
+        this.newToDoItem = {
+          text: "",
+          done: false,
+          category: ""
+        };
+      }
+
     },
 
     deleteItem(index){
