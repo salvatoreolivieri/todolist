@@ -18,26 +18,46 @@
 
       <div class="add-task-container">
         <div class="input-container">
-          <input type="text" placeholder="Write Task">
-          <button>Add Task</button>
+          <input v-model="newToDoItem.text" type="text" placeholder="Write Task">
+          <input v-model="newToDoItem.category" style="width: 100px;" type="text" placeholder="Add Category">
+          <button @click="addItem()">Add Task</button>
         </div>
       </div>
 
       <div class="task-container">
         <div class="input-container">
+
           <ul>
-            <li v-for="(item, index) in toDoList" :class="item.done ? 'task-done' : '' ">
+            <li
+              v-for="(item, index) in toDoList"
+              :class="item.done ? 'task-done' : '' ">
 
               <div class="task-item">
-                <input @click.splice="taskDone(index)" style="cursor: pointer;" type="checkbox" id="myCheck" >
+
+                <input 
+                  @click.splice="taskDone(index)"
+                  style="cursor: pointer;" 
+                  type="checkbox" id="myCheck" >
   
-                {{item.text}}
+                <span>
+                  {{item.text}}
+                </span>
+
+                <span
+                  class="category"
+                  :class="item.category">
+                  {{item.category}}
+                </span>
+
               </div>
+
               <div class="trash-item">
                 <i @click="deleteItem(index)" class="fa-solid fa-trash"></i>
               </div>
+
             </li>
           </ul>
+
         </div>
       </div>
 

@@ -8,20 +8,29 @@ const app = new Vue({
 
       {
         text: "Ripassare CSS",
-        done: false
+        done: false,
+        category: "css"
       },
 
       {
         text: "Studiare logica di programmazione",
-        done: false
+        done: false,
+        category: "logica"
       },
 
       {
         text: "Approfondire keyUp",
-        done: false
+        done: false,
+        category: "sintassi"
       }
 
-    ]
+    ],
+
+    newToDoItem: {
+        text: "",
+        done: false,
+        category: ""
+    }
   
   },
 
@@ -29,6 +38,15 @@ const app = new Vue({
 
     taskDone(index){
       this.toDoList[index].done = !this.toDoList[index].done
+    },
+
+    addItem(){
+      this.toDoList.push(this.newToDoItem);
+      this.newToDoItem = {
+        text: "",
+        done: false,
+        category: ""
+      };
     },
 
     deleteItem(index){

@@ -109,7 +109,7 @@
   border-bottom: 1px solid lightgray;
 
   list-style: none;
-  padding: 10px;
+  padding: 20px 10px;
 }
 
 .input-container li i{
@@ -120,4 +120,23 @@
 
 #myCheck{
   width: 15px;
+}
+
+.category{
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50px;
+  margin-left: 20px;
+}
+
+.logica{
+  background-color: #D863A1;
+}
+
+.sintassi{
+  background-color: #9C72E4;
+}
+
+.css{
+  background-color: #64C0A9;
 }
